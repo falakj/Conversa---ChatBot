@@ -31,7 +31,7 @@ const Login = ({ setUser, setSecret }) => {
     return (
         <div className='login-page'>
             <div className="login-container">
-                <h2 className="title">Chat Assistant</h2>
+                <h2 className="title">Conversa - AI</h2>
                 <p className="register-change" onClick={() => setIsRegister(!isRegister)}>
                     {isRegister ? "Already a user?" : "Are you a new user?"}
                 </p>
