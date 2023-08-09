@@ -17,7 +17,11 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors({ origin: 'https://falaz-conversa-client-beta.vercel.app'}));
+app.use(cors(
+        origin: ["https://falaz-conversa-client-beta.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+));
 
 /* OPEN-AI CONFIGURATION */
 const configuration = new Configuration({
