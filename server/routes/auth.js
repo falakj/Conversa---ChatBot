@@ -16,6 +16,7 @@ router.post("/login", async (req, res) => {
                     "Project-ID": process.env.PROJECT_ID,
                     "User-Name": username,
                     "User-Secret": password,
+                    "Access-Control-Allow-Origin": "*", 
                 },
             }
         );
@@ -40,7 +41,11 @@ router.post("/signup", async (req, res) => {
                 secret: password,
             },
             {
-                headers: { "Private-Key": process.env.PRIVATE_KEY },
+                headers: 
+                { 
+                    "Private-Key": process.env.PRIVATE_KEY,
+                         "Access-Control-Allow-Origin": "*", 
+                },
             }
         );
 
